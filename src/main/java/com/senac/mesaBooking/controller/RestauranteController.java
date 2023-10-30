@@ -1,5 +1,7 @@
 package com.senac.mesaBooking.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -37,7 +39,14 @@ public class RestauranteController {
             redirectAttributes.addFlashAttribute("errorMessage", "Erro ao cadastrar o restaurante: " + e.getMessage());
             return "redirect:/cadastro";
         }
-
     }
+
+    @GetMapping("/")
+    public String paginaPrincipal(Model model) {
+        List<Restaurante> restaurantes = restauranteService.buscarTodosRestaurantes();
+        model.addAttribute("restaurantes", restaurantes);
+        return "index";
+    }
+
 
 }

@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
 
 @Entity
@@ -15,8 +16,11 @@ public class Restaurante {
     private String nome;
     private String endereco;
     private String descricao;
+
+    @Lob
     private byte[] imagem;
 
+    private String imagemBase64;
 
     public Long getId() {
         return this.id;
@@ -56,6 +60,14 @@ public class Restaurante {
 
     public void setImagem(byte[] imagem) {
         this.imagem = imagem;
+    }
+
+    public String getImagemBase64() {
+        return this.imagemBase64;
+    }
+
+    public void setImagemBase64(String imagemBase64) {
+        this.imagemBase64 = imagemBase64;
     }
 
 }
