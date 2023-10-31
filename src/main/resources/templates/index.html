@@ -36,7 +36,7 @@
                     <div class="card-body">
                         <h6 class="card-title" th:text="${restaurante.nome}"></h6>
                         <p class="card-text" th:text="${restaurante.descricao}"></p>
-                        <a th:href="@{'/reservar/' + ${restaurante.id}}" class="btn btn-danger">Reservar</a>
+                        <a th:href="@{'/detalhes/' + ${restaurante.id}}" class="btn btn-danger">Reservar</a>
                     </div>
                 </div>
             </div>

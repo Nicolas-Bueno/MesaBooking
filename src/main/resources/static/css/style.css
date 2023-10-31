@@ -4,16 +4,16 @@
     margin-right: 20px;
 }
 
-/* Estilize as imagens com a classe minha-imagem */
+
 .minha-imagem {
     max-width: 286px;
-    height: 214.5px; /* Altura máxima para imagens pequenas */
-    border-radius: 5px; /* Adicione cantos arredondados */
-    transition: transform 0.3s; /* Adicione uma transição suave ao passar o mouse */
+    height: 214.5px;
+    border-radius: 5px;
+    transition: transform 0.3s;
 }
 
-/* Adicione estilo quando o mouse passa sobre a imagem */
+
 .minha-imagem:hover {
-    transform: scale(1.1); /* Amplie a imagem no hover */
+    transform: scale(1.1); 
 }
 

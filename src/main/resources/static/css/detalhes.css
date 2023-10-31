@@ -1,0 +1,16 @@
+.foto{
+    height: 350px;
+    width: auto;
+}
+
+p{
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+
+h3{
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+}

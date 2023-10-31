@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -48,5 +49,10 @@ public class RestauranteController {
         return "index";
     }
 
-
+    @GetMapping("/detalhes/{id}")
+    public String detalhesRestaurante(@PathVariable Long id, Model model){
+        Restaurante restaurante = restauranteService.obterRestaurantePorId(id);
+        model.addAttribute("restaurante", restaurante);
+        return "/detalhes";
+    }
 }
