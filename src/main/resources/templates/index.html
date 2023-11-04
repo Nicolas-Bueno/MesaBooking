@@ -11,14 +11,14 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" th:href="@{/}">
                     <img th:src="@{/img/logo.png}" alt="Logo do app" class="logo">
                 </a>
                 <!-- Formulário de pesquisa no navbar -->
-                <form class="form-inline justify-content-center" th:action="@{/pesquisar}" method="get">
+                <form class="form-inline justify-content-center" th:action="@{/}" method="get">
                     <div class="d-flex">
                         <div class="form-group mr-2">
-                            <input class="form-control" type="text" th:name="restaurantName" placeholder="Nome do restaurante" aria-label="Search">
+                            <input class="form-control" type="text" name="nome" placeholder="Nome do restaurante" aria-label="Search">
                         </div>
                         <button class="btn btn-danger" type="submit">Pesquisar</button>
                     </div>
@@ -28,7 +28,9 @@
     </header>
 
     <main class="container mt-4">
-        <h2>Restaurantes Sugeridos</h2>
+        <h2 th:if="${#strings.isEmpty(nome)}">Restaurantes Sugeridos</h2>
+        <h2 th:if="${not #strings.isEmpty(nome)}">Restaurantes Encontrados</h2>
+        <h2 th:if="${#strings.isEmpty(nome) and #lists.size(restaurantes) == 0}">Nenhum restaurante encontrado</h2>
         <div class="row">
             <div th:each="restaurante : ${restaurantes}" class="col-md-3 mb-4">
                 <div class="card" style="width: 18rem;">

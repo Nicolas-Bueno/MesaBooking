@@ -43,11 +43,19 @@ public class RestauranteController {
     }
 
     @GetMapping("/")
-    public String paginaPrincipal(Model model) {
-        List<Restaurante> restaurantes = restauranteService.buscarTodosRestaurantes();
+    public String paginaPrincipal(@RequestParam(required =  false) String nome, Model model) {
+        List<Restaurante> restaurantes;
+
+        if (nome != null && !nome.isEmpty()) {
+            restaurantes = restauranteService.obterRestaurentePorNome(nome);
+        }else{
+            restaurantes = restauranteService.buscarTodosRestaurantes();
+        }
         model.addAttribute("restaurantes", restaurantes);
+        model.addAttribute("nome", nome);
         return "index";
     }
+
 
     @GetMapping("/detalhes/{id}")
     public String detalhesRestaurante(@PathVariable Long id, Model model){
