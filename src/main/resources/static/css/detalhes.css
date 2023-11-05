@@ -1,16 +1,58 @@
-.foto{
-    height: 350px;
-    width: auto;
+.foto {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-p{
+.texto {
     font-size: 16px;
+    margin: 20px 0;
+    line-height: 1.5;
     color: #333;
-    margin-top: 10px;
 }
 
-h3{
+.bg {
+    background-color: #dc2f2f;
+}
+
+h3 {
     font-size: 24px;
+    margin-bottom: 20px;
     color: #333;
-    margin-top: 20px;
+}
+
+
+.main-content {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #ff3333; 
+    color: #fff; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+
+
+.custom-button {
+    background-color: #ff3333; 
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.custom-button:hover {
+    background-color: #cc0000;
 }

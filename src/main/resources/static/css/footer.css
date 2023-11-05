@@ -1,0 +1,43 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+}
+
+footer {
+    background-color: #dc2f2f;
+    color: #fff;
+    padding: 20px 0;
+}
+
+/* Estilos para a lista de links no rodapé */
+.footer-links li {
+    display: inline;
+    margin-right: 15px;
+}
+
+/* Estilos para o link no rodapé */
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Efeito de cor ao passar o mouse sobre o link no rodapé */
+.footer-links a:hover {
+    color: #f57b51;
+}
+
+/* Estilos para o texto de direitos autorais no rodapé */
+.copyright {
+    margin: 0;
+}
