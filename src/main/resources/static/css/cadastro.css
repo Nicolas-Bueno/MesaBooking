@@ -1,0 +1,20 @@
+.bg {
+    background-color: #dc2f2f;
+}
+.link .nav-link{
+    color: #fff;
+}
+
+.custom-button {
+    background-color: #ff3333; 
+    color: #fff; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.custom-button:hover {
+    background-color: #cc0000;
+}
