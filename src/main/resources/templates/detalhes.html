@@ -43,7 +43,7 @@
                         <p th:text="${restaurante.descricao}"></p>
                     </div>
                     <div class="text-center">
-                        <button class="custom-button">Reservar</button>
+                        <a th:href="@{'/reserva/' + ${restaurante.id}}" class="custom-button">Reservar</a>
                     </div>
                 </div>
             </div>
