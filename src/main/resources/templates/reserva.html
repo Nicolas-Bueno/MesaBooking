@@ -12,13 +12,8 @@
 
         <form th:action="@{/reserva}" method="post" enctype="multipart/form-data">
             <input type="hidden" name="restauranteId" th:value="${restauranteId}">
+            <input type="hidden" name="clienteId" th:value="${clienteId}">
 
-            <select name="cliente" th:field="${reserva.cliente}">
-                <option value="" disabled selected>Escolha o cliente</option>
-                <option th:each="cliente : ${clientes}" th:value="${cliente.id}" th:text="${cliente.nome}"></option>
-            </select>
-            
-            
             <div class="form-group">
                 <label for="data">Data da Reserva:</label>
                 <input type="date" th:field="${reserva.data}" class="form-control">

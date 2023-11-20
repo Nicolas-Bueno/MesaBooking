@@ -46,14 +46,12 @@
                     <label for="telefone">Telefone:</label>
                     <input type="tel" class="form-control" id="telefone" th:field="${cliente.telefone}">
                 </div>
-
-                <div th:if="${successMessage}" class="alert alert-success">
-                    <p th:text="${successMessage}"></p>
-                </div>
-    
+                
                 <div th:if="${errorMessage}" class="alert alert-danger">
                     <p th:text="${errorMessage}"></p>
                 </div>
+
+                <input type="hidden" name="restauranteId" th:value="${restauranteId}" />
 
                 <button type="submit" class="custom-button">Cadastrar</button>
             </form>
