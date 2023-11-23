@@ -13,6 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>mesaBooking</name>
 	<description> Sistema de reservas de mesas em restaurantes</description>
+	<!-- <packaging>war</packaging> -->
 	<properties>
 		<java.version>17</java.version>
 	</properties>
